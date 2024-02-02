@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -8,8 +8,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { AppProgressBar } from "next-nprogress-bar";
 
 const inter = Inter({ subsets: ["latin"] });
-
-
 
 export default function RootLayout({
   children,
@@ -25,17 +23,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          
           <main className=" max-w-2xl  mx-auto px-4 py-5">
-          <AppProgressBar
-        height="5px"
-        color="red"
-        options={{ showSpinner: false }}
-        
-        shallowRouting
-      />
-            <Navbar/>
-            {children}</main>
+            <AppProgressBar
+              height="5px"
+              color="red"
+              options={{ showSpinner: false }}
+              shallowRouting
+            />
+            <Navbar />
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

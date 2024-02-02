@@ -11,28 +11,30 @@ async function getData() {
   return data;
 }
 
-
-
 export default async function Home() {
-  const data:blogDatatype[] = await getData();
-console.log(data)
+  const data: blogDatatype[] = await getData();
+  console.log(data);
   return (
     <div className="grid grid-cols-2 gap-5  max-sm:grid-cols-1 mt-8 ">
-     {
-      data?.map((post)=>{
-        return(
-          <Link href={`/blog/${post.currentSlug}`} key={post?.title} >
-          <Card className=" py-1 px-1 cursor-pointer" >
-            <div className="relative w-full h-[200px]">
-            <Image alt={`${post?.title} image`} fill className="absolute object-contain" src={urlFor(post?.titleImage).url()} />
+      {data?.map((post) => {
+        return (
+          <Link href={`/blog/${post.currentSlug}`} key={post?.title}>
+            <div className="min-h-[245px] max-h-[250px] w-full  p-2 overflow-hidden ">
+              <div className="relative w-full h-[200px]">
+                <Image
+                  alt={`${post?.title} image`}
+                  fill
+                  className="absolute object-cover rounded-md"
+                  src={urlFor(post?.titleImage).url()}
+                />
+              </div>
+              <p className="text-xs mt-1 dark:text-white max-sm:text-center line-clamp-3  text-gray-600">
+                {post?.smalldescription}
+              </p>
             </div>
-            <p className="text-xs max-sm:text-center text-gray-600">{post?.smalldescription}</p>
-            
-          </Card>
           </Link>
-        )
-      })
-     }
+        );
+      })}
     </div>
   );
 }

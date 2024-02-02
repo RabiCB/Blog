@@ -49,7 +49,7 @@ console.log(blog)
             <span>{blog?.title}</span>
         </div>
         <Image width={800} height={800} alt={blog?.title ??'blog-img'} className='rounded-md mt-8' src={urlFor(blog?.titleImage).url()} />
-        <div className='mt-16'>
+        <div className='mt-16 prose prose-blue prose-xl lg:prose-2xl prose-headings:underline dark:prose-invert'>
             <PortableText value={blog?.content}/>
         </div>
     </div>
