@@ -17,7 +17,32 @@ export const metadata: Metadata = {
   verification: {
     google: "rqoGcoydFL1P8M80747RFMH41LZkBG1Ti4eCLGPiAEo",
   },
-  keywords:"blog ,react.js , frontend, next.js, developer , chandra , cb , frontend tools , web development, web developer , mobile application"
+  openGraph:{
+    title:'Blogcb',
+    description:"Blogs and Latest technology articles",
+    images:{
+      url:"./favicon.ico"
+    }
+
+  },
+  twitter:{
+    title:'Blogcb',
+    description:"Blogs and Latest technology articles",
+    images:{
+      url:"./favicon.ico"
+    },
+    card:'summary'
+
+  },
+  keywords:"blog ,react.js , frontend, next.js, developer , chandra , cb , frontend tools , web development, web developer , mobile application",
+  robots:{
+    follow:true,
+    googleBot:{
+      index:true,
+      follow:true,
+
+    }
+  }
 };
 
 async function getData() {
