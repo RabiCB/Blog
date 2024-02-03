@@ -3,7 +3,7 @@ import { Client, urlFor } from '@/app/lib/sanity'
 import { PortableText } from '@portabletext/react'
 import { Metadata, ResolvingMetadata } from 'next'
 import Image from 'next/image'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 
 export async function generateMetadata(
@@ -43,8 +43,10 @@ const blog:blogtype=await getIndividualBlog(props?.params?.slug)
 
 console.log(blog)
   return (
+    <Suspense fallback={<p>loading....</p>}>
+      
     <div className='mt-8'>
-        <h1 className='text-base block text-center text-blue-500 font-semibold tracking-wide uppercase'>CHANDRA BHANDARI(RABI)-BLog</h1>
+        <h1 className='text-base text-center text-blue-500 tracking-wide '>Published By: Chandra Bhandari(Rabi)</h1>
         <div className='mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl'>
             <span>{blog?.title}</span>
         </div>
@@ -53,6 +55,8 @@ console.log(blog)
             <PortableText value={blog?.content}/>
         </div>
     </div>
+    
+    </Suspense>
   )
 }
 

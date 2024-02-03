@@ -5,8 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
-import { AppProgressBar } from "next-nprogress-bar";
-
+import NextTopLoader from "nextjs-toploader";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -17,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -24,12 +24,18 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className=" max-w-2xl  mx-auto px-4 py-5">
-            <AppProgressBar
-              height="5px"
-              color="red"
-              options={{ showSpinner: false }}
-              shallowRouting
-            />
+          <NextTopLoader
+            color="#2299DD"
+            initialPosition={0.08}
+            crawlSpeed={200}
+            height={3}
+            crawl={true}
+            showSpinner={false}
+            easing="ease"
+            speed={200}
+            shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+          />
+          
             <Navbar />
             {children}
           </main>

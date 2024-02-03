@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className='flex relative justify-between  items-center'>
         <Link href="/" className='font-bold text-3xl'>
-            Chandra<span className='text-blue-500'>Blog</span>
+            Blog<span className='text-blue-500'>Cb</span>
         </Link>
         <div>
             <ModeToggle/>
