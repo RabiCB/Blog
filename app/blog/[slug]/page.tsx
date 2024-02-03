@@ -21,10 +21,16 @@ export async function generateMetadata(
     return {
       title: content?.title,
       description:content?.smalldescription,
+       
+
+    
       openGraph: {
+        url:"https://blogscb.netlify.app/jjj",
         images: [{
             url:urlFor(content?.titleImage).url()
         }],
+        type:'website',
+        
       },
     }
   }
