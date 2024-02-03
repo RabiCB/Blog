@@ -14,6 +14,7 @@ export const getBlogList = `*[_type=="blog"] | order(_createdAt desc){
         "currenSlug":slug.current,
         title,
         content,
+        keywords,
         
         smalldescription,
         titleImage

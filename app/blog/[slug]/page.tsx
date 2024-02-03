@@ -14,6 +14,8 @@ export async function generateMetadata(
 
   const content = await getIndividualBlog(slug);
 
+
+
   return {
     title: content?.title,
     description: content?.smalldescription,
