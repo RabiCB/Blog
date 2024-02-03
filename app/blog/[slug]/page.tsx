@@ -25,7 +25,7 @@ export async function generateMetadata(
 
     
       openGraph: {
-        url:"https://blogscb.netlify.app/jjj",
+     
         images: [{
             url:urlFor(content?.titleImage).url()
         }],
