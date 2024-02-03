@@ -14,7 +14,13 @@ export default {
         options:{
             source:'title'
         }
-      },{
+      },
+      {
+        name:'keywords',
+        type:'text',
+        tilte:'keywords for seo'
+      },
+      {
         name:'titleImage',
         type:"image",
         title:"Title Image"
