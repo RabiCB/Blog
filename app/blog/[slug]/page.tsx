@@ -30,6 +30,8 @@ export async function generateMetadata(
             url:urlFor(content?.titleImage).url()
         }],
         type:'website',
+        title:content?.title,
+        description:content?.smalldescription
         
       },
     }
