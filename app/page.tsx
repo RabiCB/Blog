@@ -16,9 +16,7 @@ import { MyVerticallyCenteredModal } from "@/components/Modal/SearchModal";
 export const metadata: Metadata = {
   title: "Geekdev - we make fontend development easy ",
   description: "Blogs and Latest technology articles",
-  verification: {
-    google: "rqoGcoydFL1P8M80747RFMH41LZkBG1Ti4eCLGPiAEo",
-  },
+  
   openGraph:{
     title:'Geekdev - we make fontend development easy ',
     description:"Stay on top of the latest trends and best practices in frontend web development with our blog web application.",
