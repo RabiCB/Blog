@@ -1,4 +1,4 @@
-import { getBlogList } from "@/api/BlogData";
+import { getBlogList } from "@/apis/BlogData";
 import { MetadataRoute } from "next";
 import { Client } from "./lib/sanity";
 
@@ -10,18 +10,15 @@ const generateBlogPostsSitemapObjects = async () => {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
-      url: "https://blogscb.netlify.app",
+      url: "https://geekdev.netlify.app",
       priority: 1,
     
     },
-    {
-      url
-
-    },
+    
    
 
     ...(await generateBlogPostsSitemapObjects()).map((o: any) => ({
-      url: `https://blogscb.netlify.app/blog/${o?.currentSlug}`,
+      url: `https://geekdev.netlify.app/blog/${o?.currentSlug}`,
       
     })),
   ];

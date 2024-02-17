@@ -1,5 +1,6 @@
-import { getIndividualBlog } from "@/api/BlogData";
+import { getIndividualBlog } from "@/apis/BlogData";
 import { Client, urlFor } from "@/app/lib/sanity";
+import Footer from "@/components/footer/Footer";
 import { PortableText } from "@portabletext/react";
 import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
@@ -59,7 +60,8 @@ const Page = async (props: any) => {
   const blog: blogtype = await getIndividualBlog(props?.params?.slug);
 
   return (
-    <div className="mt-8">
+    <>
+    <div className="mt-8 flex items-center justify-center w-full flex-col">
       <h1 className="text-base text-center text-blue-500 tracking-wide ">
         Published By: Chandra Bhandari(Rabi)
       </h1>
@@ -77,6 +79,8 @@ const Page = async (props: any) => {
         <PortableText value={blog?.content} />
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

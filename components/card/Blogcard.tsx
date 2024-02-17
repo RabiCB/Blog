@@ -10,8 +10,8 @@ interface Iprops{
 }
 const Blogcard = ({smalldescription,title,titleImage}:Iprops) => {
   return (
-    <div className="min-h-[245px] max-h-[250px] w-full  p-2 overflow-hidden ">
-    <div className="relative w-full h-[200px]">
+    <div className="min-h-[300px] max-h-[340px] w-full  p-2 overflow-hidden ">
+    <div className="relative w-full h-[280px]">
       <Image
         alt={`${title} image`}
         fill
