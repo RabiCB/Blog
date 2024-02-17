@@ -12,14 +12,14 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Skeletons from "@/components/Loader/Skeletons";
 
 export const metadata: Metadata = {
-  title: "Blogcb",
+  title: "Blogscb - we make fontend development easy ",
   description: "Blogs and Latest technology articles",
   verification: {
     google: "rqoGcoydFL1P8M80747RFMH41LZkBG1Ti4eCLGPiAEo",
   },
   openGraph:{
-    title:'Blogcb',
-    description:"Blogs and Latest technology articles",
+    title:'Blogscb - we make fontend development easy ',
+    description:"Stay on top of the latest trends and best practices in frontend web development with our blog web application.",
     images:{
       url:"./favicon.ico"
     }
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter:{
     title:'Blogcb',
-    description:"Blogs and Latest technology articles",
+    description:"Stay on top of the latest trends and best practices in frontend web development with our blog web application.",
     images:{
       url:"./favicon.ico"
     },

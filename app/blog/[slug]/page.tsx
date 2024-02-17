@@ -17,6 +17,10 @@ export async function generateMetadata(
 
 
   return {
+
+    robots:{
+   follow:true
+    },
     title: content?.title,
     description: content?.smalldescription,
     keywords: content?.keywords,
@@ -40,6 +44,8 @@ export async function generateMetadata(
       title: content?.title,
       description: content?.smalldescription,
     },
+
+    
   };
 }
 

@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import NextTopLoader from "nextjs-toploader";
+import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -13,6 +14,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  useEffect(()=>{
+    scrollTo(0,0)
+  })
   return (
     <html lang="en">
       <body className={inter.className}>

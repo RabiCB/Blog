@@ -12,7 +12,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: "https://blogscb.netlify.app",
       priority: 1,
+    
     },
+    {
+      url
+
+    },
+   
 
     ...(await generateBlogPostsSitemapObjects()).map((o: any) => ({
       url: `https://blogscb.netlify.app/blog/${o?.currentSlug}`,
