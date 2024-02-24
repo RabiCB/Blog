@@ -18,7 +18,12 @@ export default {
       {
         name:'keywords',
         type:'text',
-        tilte:'keywords for seo'
+        title:'keywords for seo'
+      },
+      {
+        name:'smallcontent',
+        type:'text',
+        title:'short content for home page'
       },
       {
         name:'titleImage',

@@ -4,5 +4,7 @@ export interface blogDatatype{
     smalldescription:string|null,
     currentSlug:string
     titleImage:any
+    content:string
+    smallcontent:string
 
 }

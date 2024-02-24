@@ -4,7 +4,9 @@ export const getBlogList = `*[_type=="blog"] | order(_createdAt desc){
     title,
       smalldescription,
       "currentSlug":slug.current,
-      titleImage
+      titleImage,
+      content,
+      smallcontent,
       
   }`;
 

@@ -57,7 +57,7 @@ export default async function Home() {
     <>
     
     <Suspense fallback={<Skeletons />}>
-      <div className="grid grid-cols-3 gap-5 max-md:grid-cols-2  max-sm:grid-cols-1 mt-8 ">
+      <div className="flex flex-col mt-8">
         {data?.map((post) => {
           return (
             <Link href={`/blog/${post.currentSlug}`} key={post?.title}>
@@ -65,6 +65,9 @@ export default async function Home() {
                 smalldescription={post?.smalldescription}
                 title={post?.title}
                 titleImage={post?.titleImage}
+                slug={post?.currentSlug}
+                content={post?.content}
+                description={post?.smallcontent}
               />
             </Link>
           );
