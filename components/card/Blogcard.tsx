@@ -29,7 +29,7 @@ const Blogcard = ({
           fill
           className="absolute object-cover rounded-md"
           src={urlFor(titleImage).url()}
-        />:<div className="min-w-[340px] font-bold text-lg text-center min-h-[170px] bg-gray-2000">
+        />:<div className="min-w-[340px] font-bold text-lg text-center flex items-center justify-center min-h-[170px] bg-gray-400 rounded-md">
           {
             title
           }
