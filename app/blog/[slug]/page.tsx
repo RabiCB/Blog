@@ -2,6 +2,7 @@ import { getIndividualBlog } from "@/apis/BlogData";
 import { Client, urlFor } from "@/app/lib/sanity";
 import Footer from "@/components/footer/Footer";
 import { PortableText } from "@portabletext/react";
+import { Link } from "lucide-react";
 import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import React, { Suspense } from "react";
@@ -62,9 +63,9 @@ const Page = async (props: any) => {
   return (
     <>
     <div className="mt-8 flex items-center justify-center w-full flex-col">
-      <h1 className="text-base text-center text-blue-500 tracking-wide ">
+      <Link href="https://chandra-bhandari.com.np/" className="text-base text-center text-blue-500 tracking-wide ">
         Published By: Chandra Bhandari(Rabi)
-      </h1>
+      </Link>
       <div className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
         <span>{blog?.title}</span>
       </div>

@@ -24,9 +24,9 @@ const Navbar = () => {
           ) : (
             <Image fill alt="geekdev" src={"/geekdark.png"} />
           )}
-        </div>
+ </div>
       </Link>
-      <div className="flex items-center h-full   ">
+      <div className="flex items-center h-full   ">/[]
         <ModeToggle />
         <Button
           onClick={cnxt?.handleOpenSearchModal}
