@@ -24,20 +24,18 @@ const Navbar = () => {
           ) : (
             <Image fill alt="geekdev" src={"/geekdark.png"} />
           )}
- </div>
+        </div>
       </Link>
-      <div className="flex items-center h-full   ">/[]
+      <div className="flex items-center h-full   ">
         <ModeToggle />
         <Button
+          className="max-md:hidden"
           onClick={cnxt?.handleOpenSearchModal}
           style={{ marginLeft: 8 }}
           variant="outline"
           size="default"
-
         >
-            CTRL + K <CiSearch size={16} className="ml-2"/>
-        
-       
+          CTRL + K <CiSearch size={16} className="ml-2" />
         </Button>
       </div>
     </div>
