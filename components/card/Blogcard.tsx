@@ -24,12 +24,17 @@ const Blogcard = ({
   return (
     <div className="min-h-[240px] flex items-start  max-md:flex-col relative">
       <div className="relative max-md:w-full min-w-[340px] min-h-[170px]">
-        <Image
+        {titleImage ?<Image
           alt={`${title} image`}
           fill
           className="absolute object-cover rounded-md"
           src={urlFor(titleImage).url()}
-        />
+        />:<div className="min-w-[340px] font-bold text-lg text-center min-h-[170px] bg-gray-2000">
+          {
+            title
+          }
+
+        </div>}
       </div>
       <div className="mt-2 ml-4 max-md:mt-2 max-md:ml-0 text-justify   w-[60%] max-md:w-full">
         <p className="text-xs  max-md:pt-0 dark:text-white max-sm:text-center   text-gray-600">
