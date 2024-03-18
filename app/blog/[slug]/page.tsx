@@ -69,13 +69,13 @@ const Page = async (props: any) => {
       <div className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
         <span>{blog?.title}</span>
       </div>
-      <Image
+      {blog?.titleImage &&<Image
         width={800}
         height={800}
         alt={blog?.title ?? "blog-img"}
         className="rounded-md mt-8"
         src={urlFor(blog?.titleImage).url()}
-      />
+      />}
       <div className="mt-16 prose prose-blue prose-xl lg:prose-2xl prose-headings:underline dark:prose-invert">
         <PortableText value={blog?.content} />
       </div>
