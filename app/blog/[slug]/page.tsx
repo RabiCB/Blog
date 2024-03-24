@@ -2,9 +2,10 @@ import { getIndividualBlog } from "@/apis/BlogData";
 import { Client, urlFor } from "@/app/lib/sanity";
 import Footer from "@/components/footer/Footer";
 import { PortableText } from "@portabletext/react";
-import { Link } from "lucide-react";
+
 import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import React, { Suspense } from "react";
 
 export async function generateMetadata(
@@ -29,7 +30,7 @@ export async function generateMetadata(
     openGraph: {
       images: [
         {
-          url: urlFor(content?.titleImage).url(),
+          url: content?.titleImage? urlFor(content?.titleImage)?.url() : "",
         },
       ],
       type: "website",
@@ -39,7 +40,7 @@ export async function generateMetadata(
     twitter: {
       images: [
         {
-          url: urlFor(content?.titleImage).url(),
+          url: content?.titleImage? urlFor(content?.titleImage)?.url() : "",
         },
       ],
 
@@ -63,9 +64,7 @@ const Page = async (props: any) => {
   return (
     <>
     <div className="mt-8 flex items-center justify-center w-full flex-col">
-      <Link href="https://chandra-bhandari.com.np/" className="text-base text-center text-blue-500 tracking-wide ">
-        Published By: Chandra Bhandari(Rabi)
-      </Link>
+     
       <div className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
         <span>{blog?.title}</span>
       </div>
@@ -76,6 +75,11 @@ const Page = async (props: any) => {
         className="rounded-md mt-8"
         src={urlFor(blog?.titleImage).url()}
       />}
+      <Link  href="https://chandra-bhandari.com.np/"  target="_blank">
+       <span  className="text-base mt-2 text-center text-black dark:text-white cursor-pointer">
+        Published By: Chandra Bhandari(Rabi)
+      </span>
+      </Link>
       <div className="mt-16 prose prose-blue prose-xl lg:prose-2xl prose-headings:underline dark:prose-invert">
         <PortableText value={blog?.content} />
       </div>
